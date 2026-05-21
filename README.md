@@ -19,42 +19,35 @@ A responsive AI content generation web page built with Next.js as part of a Fron
 - Dummy API that returns mock images and videos
 
 ## Project Structure
-ai-content-generator/
-
-├── app/
-
-│   ├── api/
-
-│   │   └── generate/
-
-│   │       └── route.js        # Dummy API — returns mock images or videos
-
-│   ├── globals.css             # CSS variables, theme tokens, global resets
-
-│   ├── layout.js               # Root layout
-
-│   └── page.js                 # Main page — lifted state, layout orchestration
-├── components/
-│   ├── DrawerNavTabs.jsx       # Mobile/tablet drawer navigation tabs
-│   ├── DrawerNavTabs.module.css
-│   ├── GalleryGrid.jsx         # Responsive image/video grid
-│   ├── GalleryGrid.module.css
-│   ├── HistoryBar.jsx          # Scrollable history thumbnail bar
-│   ├── HistoryBar.module.css
-│   ├── Navbar.jsx              # Top navigation bar
-│   ├── Navbar.module.css
-│   ├── PromptCard.jsx          # Displays last used prompt
-│   ├── PromptCard.module.css
-│   ├── Providers.jsx           # Wraps ThemeProvider
-│   ├── Sidebar.jsx             # Settings panel with prompt input and controls
-│   └── Sidebar.module.css
-├── context/
-│   └── ThemeContext.jsx        # Dark/light mode context
-├── data/
-│   └── images.js               # Static fallback image paths
-└── public/
-├── images/                 # Local model images used in gallery and history
-└── videos/                 # Sample video files for video generation mode
+ai-content-generator/<br>
+├── app/<br>
+│   ├── api/<br>
+│   │   └── generate/<br>
+│   │       └── route.js        # Dummy API — returns mock images or videos<br>
+│   ├── globals.css             # CSS variables, theme tokens, global resets<br>
+│   ├── layout.js               # Root layout<br>
+│   └── page.js                 # Main page — lifted state, layout orchestration<br>
+├── components/<br>
+│   ├── DrawerNavTabs.jsx       # Mobile/tablet drawer navigation tabs<br>
+│   ├── DrawerNavTabs.module.css<br>
+│   ├── GalleryGrid.jsx         # Responsive image/video grid<br>
+│   ├── GalleryGrid.module.css<br>
+│   ├── HistoryBar.jsx          # Scrollable history thumbnail bar<br>
+│   ├── HistoryBar.module.css<br>
+│   ├── Navbar.jsx              # Top navigation bar<br>
+│   ├── Navbar.module.css<br>
+│   ├── PromptCard.jsx          # Displays last used prompt<br>
+│   ├── PromptCard.module.css<br>
+│   ├── Providers.jsx           # Wraps ThemeProvider<br>
+│   ├── Sidebar.jsx             # Settings panel with prompt input and controls<br>
+│   └── Sidebar.module.css<br>
+├── context/<br>
+│   └── ThemeContext.jsx        # Dark/light mode context<br>
+├── data/<br>
+│   └── images.js               # Static fallback image paths<br>
+└── public/<br>
+├── images/                 # Local model images used in gallery and history<br>
+└── videos/                 # Sample video files for video generation mode<br>
 
 ## Getting Started
 
@@ -82,28 +75,18 @@ http://localhost:3000
 
 The `/api/generate` endpoint simulates a real AI generation API. It accepts a POST request with a JSON body and returns mock image or video file paths based on the `type` field.
 
-**Request body:**
-
-{
-
-  "prompt": "a red car in the rain",
-
-  "count": 8,
-
-  "type": "Image"
-
+**Request body:**<br>
+{<br>
+  "prompt": "a red car in the rain",<br>
+  "count": 8,<br>
+  "type": "Image"<br>
 }
 
-**Response:**
-
-{
-
-  "images": ["/images/model3.jpg", "/images/model7.jfif", ...],
-
-  "type": "Image",
-
-  "count": 8
-
+**Response:**<br>
+{<br>
+  "images": ["/images/model3.jpg", "/images/model7.jfif", ...],<br>
+  "type": "Image",<br>
+  "count": 8<br>
 }
 
 Set `type` to `"Video"` to receive video file paths instead.
