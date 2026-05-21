@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-page: #f8f3ef;
+  --bg-panel: #f1e7e1;
+  --bg-sidebar: #f3e8e2;
+  --bg-card: #ffffff;
+  --bg-prompt-card: #f5ebe4;
+  --bg-history: #f1e7e1;
+  --bg-control: #ffffff;
+  --bg-toggle: #ffffff;
+  --bg-tab-active: #e8d0c4;
+  --border-main: #d4b8af;
+  --border-dark: #111111;
+  --border-nav: #e8ddd8;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #727070;
+  --text-placeholder: #999999;
+  --accent: #d89c87;
+  --accent-hover: #ca8d77;
+  --accent-indicator: #c97a62;
+  --nav-bg: #f0e8e3;
+  --shadow-box: rgba(192,190,190,0.18);
+  --skeleton-from: #e8ddd8;
+  --skeleton-to: #f0e8e3;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  --bg-page: #1a1614;
+  --bg-panel: #241e1b;
+  --bg-sidebar: #2a211d;
+  --bg-card: #2f2622;
+  --bg-prompt-card: #2a211d;
+  --bg-history: #241e1b;
+  --bg-control: #3a2e29;
+  --bg-toggle: #3a2e29;
+  --bg-tab-active: #5c3d30;
+  --border-main: #4a3630;
+  --border-dark: #8a7a74;
+  --border-nav: #3a2e28;
+  --text-primary: #f0e8e3;
+  --text-secondary: #d4c5bc;
+  --text-muted: #a08880;
+  --text-placeholder: #7a6860;
+  --accent: #c97a62;
+  --accent-hover: #b86d56;
+  --accent-indicator: #d89c87;
+  --nav-bg: #2a211d;
+  --shadow-box: rgba(0,0,0,0.3);
+  --skeleton-from: #2a211d;
+  --skeleton-to: #3a2e28;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-img-animate {
+  animation: fadeInUp 0.4s ease forwards;
 }
