@@ -20,12 +20,19 @@ A responsive AI content generation web page built with Next.js as part of a Fron
 
 ## Project Structure
 ai-content-generator/
+
 ├── app/
+
 │   ├── api/
+
 │   │   └── generate/
+
 │   │       └── route.js        # Dummy API — returns mock images or videos
+
 │   ├── globals.css             # CSS variables, theme tokens, global resets
+
 │   ├── layout.js               # Root layout
+
 │   └── page.js                 # Main page — lifted state, layout orchestration
 ├── components/
 │   ├── DrawerNavTabs.jsx       # Mobile/tablet drawer navigation tabs
@@ -59,16 +66,16 @@ ai-content-generator/
 ### Installation
 
 1. Clone the repository:
-git clone https://github.com/hadi13-cloud/Responsive-AI-Content-Generation-Web-Page.git
+git clone https://github.com/hadi13-cloud/ai-content-generator.git<br>
 cd ai-content-generator
 
-2. Install dependencies:
+2. Install dependencies:<br>
 npm install
 
-3. Run the development server:
+3. Run the development server:<br>
 npm run dev
 
-4. Open your browser and go to:
+4. Open your browser and go to:<br>
 http://localhost:3000
 
 ## Dummy API
@@ -76,17 +83,27 @@ http://localhost:3000
 The `/api/generate` endpoint simulates a real AI generation API. It accepts a POST request with a JSON body and returns mock image or video file paths based on the `type` field.
 
 **Request body:**
+
 {
+
   "prompt": "a red car in the rain",
+
   "count": 8,
+
   "type": "Image"
+
 }
 
 **Response:**
+
 {
+
   "images": ["/images/model3.jpg", "/images/model7.jfif", ...],
+
   "type": "Image",
+
   "count": 8
+
 }
 
 Set `type` to `"Video"` to receive video file paths instead.
@@ -94,17 +111,10 @@ Set `type` to `"Video"` to receive video file paths instead.
 ## Responsiveness
 
 The page is fully responsive and has been tested across different devices:
-●	Mobile (320px+)
-●	Tablet
-●	Desktop
+- Mobile (320px+)
+- Tablet
+- Desktop
 
 ## Dark Mode
 
 Dark mode is supported and persists across page reloads via `localStorage`. Toggle it using the moon/sun icon in the top navigation bar.
-
-## Design Decisions
-
-- **Lifted state in `page.js`:** The Sidebar is rendered twice — once in the desktop layout and once inside the mobile drawer. To keep both instances in sync, all sidebar input state is lifted to `page.js` and passed down as props. This avoids duplicated state and unnecessary re-renders.
-- **CSS Modules + Tailwind together:** Custom component styles use CSS Modules for scoping. Layout and spacing in `page.js` use Tailwind utility classes for speed and consistency.
-- **Dummy API with simulated delay:** An 800ms `setTimeout` is added to the API route to simulate real network latency, making the loading state meaningful during testing.
-- **Semantic HTML:** `<header>`, `<main>`, `<nav>`, `<aside>`, `<section>`, and `<ul>/<li>` are used throughout for accessibility and document structure.
