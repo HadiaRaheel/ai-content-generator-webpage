@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Content Generator
 
 A responsive AI content generation web page built with Next.js as part of a Frontend Developer Technical Assessment.
@@ -101,3 +102,6 @@ The page is fully responsive and has been tested across different devices:
 ## Dark Mode
 
 Dark mode is supported and persists across page reloads via `localStorage`. Toggle it using the moon/sun icon in the top navigation bar.
+=======
+# ai-content-generator-webpage
+>>>>>>> 34a8b2285639541726ca4fb5a7bf6a861bd2549c
