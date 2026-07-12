@@ -60,7 +60,7 @@ ai-content-generator/<br>
 
 1. Clone the repository:
 git clone https://github.com/HadiaRaheel/ai-content-generator-webpage.git<br>
-cd ai-content-generator
+cd ai-content-generator-webpage
 
 2. Install dependencies:<br>
 npm install
