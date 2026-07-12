@@ -59,7 +59,7 @@ ai-content-generator/<br>
 ### Installation
 
 1. Clone the repository:
-git clone https://github.com/hadi13-cloud/ai-content-generator.git<br>
+git clone https://github.com/HadiaRaheel/ai-content-generator-webpage.git<br>
 cd ai-content-generator
 
 2. Install dependencies:<br>
